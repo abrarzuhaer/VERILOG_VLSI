@@ -8,7 +8,7 @@ module shift_reg #(parameter DATA_LENGTH = 12)(
 
     always @(posedge clk or negedge reset_n) begin
         if (!reset_n)
-            data_out_p <= 'b0; // Asynchronous reset: Reset the output to zero
+            data_out_p <= 'b0; // Asynchronous reset
         else if (shift_en)
             data_out_p <= data_in_p; // If shift_en is high, load data_in_p into the register
     end
