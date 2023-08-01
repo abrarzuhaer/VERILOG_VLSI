@@ -17,7 +17,7 @@ module top #(parameter INSTR_LENGTH = 12)(
         .clk(clk),
         .reset_n(reset_n),
         .start(start),
-        .exec_en(ALU.exec_en), // Use ALU's exec_en directly
+        .exec_en(ALU.exec_en), // Useing ALU's exec_en directly
         .rvalid(rvalid)
     );
 
@@ -26,11 +26,11 @@ module top #(parameter INSTR_LENGTH = 12)(
         .b(instruction[6:3]),
         .opcode(instruction[2:0]),
         .funct(instruction[11]),
-        .exec_en(), // No need to declare this as a wire, use it directly
-        .out(result[3:0]), // Use unpacked output directly
+        .exec_en(), 
+        .out(result[3:0]), 
         .cb(cb)
     );
 
-    assign cb = result[4]; // Extract carry bit from result
+    assign cb = result[4]; // Extracting carry bit from result
 
 endmodule
