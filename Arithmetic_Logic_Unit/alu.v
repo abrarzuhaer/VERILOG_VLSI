@@ -26,7 +26,7 @@ module alu #(parameter BIT_LENGTH = 4)(
         endcase
 
         if (!exec_en)
-            {cb, out} = 'b0; // Set output to zero when exec_en is low
+            {cb, out} = 'b0; 
     end
 
 endmodule
