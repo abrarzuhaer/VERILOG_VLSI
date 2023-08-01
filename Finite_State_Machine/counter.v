@@ -8,9 +8,9 @@ module counter(
 
     always @(posedge clk) begin
         if (!reset_n) begin
-            count <= 3'b0; // Synchronous reset: Reset the counter to zero
+            count <= 3'b0; 
         end else begin
-            count <= clear ? 3'b0 : count + increment; // Increment the counter unless clear is asserted
+            count <= clear ? 3'b0 : count + increment; 
         end
     end
 
